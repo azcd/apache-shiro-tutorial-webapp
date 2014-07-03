@@ -79,7 +79,7 @@
         <li>You may <shiro:lacksPermission name="ship:NCC-1701-D:command"><b>NOT</b> </shiro:lacksPermission> command the <code>NCC-1701-D</code> Starship!</li>
         <li>You may <shiro:lacksPermission name="user:${account.username}:edit"><b>NOT</b> </shiro:lacksPermission> edit the ${account.username} user!</li>
     </ul>
-
+	<%=org.apache.shiro.SecurityUtils.getSubject().getPrincipals()%>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
